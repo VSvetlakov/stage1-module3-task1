@@ -16,11 +16,11 @@ public class Generics {
 
     //TODO: Refactor Method-2
     public <T>Object genericMethod(Object data) {
-        return data;
+        return (T)data;
     }
 
     //TODO: Refactor Method-3
-    public void cloneMethod(List<? super Integer> consumer, List<Integer> producer) {
+    public <T> void cloneMethod(List<? super T> consumer, List<? extends T> producer) {
         consumer.addAll(producer);
     }
 
